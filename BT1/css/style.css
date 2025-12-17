@@ -1,0 +1,254 @@
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box; /*giữ nguyên kích thước elements khi dùng padding&border*/
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    padding-top:70px;
+}
+
+/*NAV*/
+.logo{
+    font-size: 40px;
+}
+
+.search-icon:hover{
+    cursor: pointer;
+}
+
+.search-form {
+    max-width: 350px;
+    width: 100%;
+}
+
+.search-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #555;
+}
+
+.user-icon {
+    font-size: 2.1rem; /* to gần bằng chiều cao button */
+    cursor: pointer;
+    padding:10px;
+}
+
+/*SLIDER*/
+#carouselExampleControls { /*cố định chiều cao slider*/
+    height: 750px;
+}
+
+#carouselExampleControls .carousel-item img { /*cho ảnh fit khung*/
+    height: 750px;
+    object-fit: cover;
+}
+
+.intro-slider{
+    width:100%;
+}
+
+/*CONTENT*/
+.heading{
+    text-align: center;
+    text-transform: uppercase;
+    padding-top:60px;
+}
+
+.about-text{
+    text-align: justify;
+    line-height: 1.6;
+    padding-bottom:60px;
+}
+
+.row{
+    padding-bottom: 60px;
+}
+
+.category-item, .product-card{
+    padding: 20px;
+    transition: all 0.3s ease; /*giúp hover chuyển động mượt*/
+}
+
+.category-item:hover, .product-card:hover {
+    transform: translateY(-10px); /*làm phần tử nổi lên theo chiều dọc*/
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.category-link{
+    color:gray;
+}
+
+.category-link:hover{
+    text-decoration: none;
+    color:black;
+}
+
+.intro-section p{
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.intro-head{
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.intro-img{
+    padding:20px 0px 25px;
+}
+
+.products-divider{
+    background-color: rgba(0, 0, 0, .1);
+    width: 60px;       
+    height: 2px;        
+    border: none;
+    margin-top: 8px;  
+    margin-bottom: 16px;
+}
+
+.product-head, 
+.product-detail{
+    padding:10px 0px;
+}
+
+.cart-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.bi-x-square:hover{
+    cursor:pointer;
+}
+
+.bi-x-square{
+    padding:4px;
+}
+
+.see-more {
+    color: #555;
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.see-more:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+.dropdown-hover:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+
+.breadcrumb{
+    padding:0px;
+    background-color: white;
+}
+
+.breadcrumb a{
+    text-decoration: none;
+    color:#555
+}
+
+.breadcrumb a:hover{
+    color:#000
+}
+
+.out-of-stock{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(77, 71, 71, 0.7);
+    color: #fff;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 6px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+table.table th {
+    white-space: nowrap; /* Không xuống dòng */
+}
+
+/*FOOTER*/
+.container{
+    padding:70px;
+}
+
+.footer{
+    background-color: rgba(56, 52, 43, 0.94);
+}
+
+.footer-head{
+    font-size: 18px;
+    text-transform: uppercase;
+    color:#f1f1f1;
+}
+
+.footer-divider {
+    width: 60px;       
+    height: 2px;        
+    background-color: hsla(0, 0%, 100%, .3);
+    border: none;
+    margin-top: 8px;  
+    margin-bottom: 16px;
+}
+
+.footer a, .footer p{
+    text-decoration: none;
+    color:#f1f1f1;
+}
+
+.footer a:hover{
+    text-decoration: none;
+    color:#f1f1f1;
+}
+
+/*policy*/
+.policy h1{
+    text-transform: uppercase;
+}
+
+.policy .section-title {
+    font-weight: 600;        
+    margin-top: 20px;
+    color:#000;
+}
+
+.policy ul, 
+.intro-section ul,
+.describe ul {
+    padding-left: 45px;     
+    margin-bottom: 16px;
+}
+
+.policy ul li,
+.describe ul li{
+    line-height: 2.6;
+}
+
+.policy p{
+    color:#000;
+}
+
+.no-bullet{
+    list-style: none;
+}
+
+.no-bullet strong{
+    text-decoration: underline;
+}
+
