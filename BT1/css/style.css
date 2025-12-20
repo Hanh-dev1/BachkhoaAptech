@@ -8,7 +8,7 @@ html {
     scroll-behavior: smooth;
 }
 
-body{
+.pd-body{
     padding-top:70px;
 }
 
@@ -250,5 +250,35 @@ table.table th {
 
 .no-bullet strong{
     text-decoration: underline;
+}
+
+/*SIGNIN-SIGNUP*/
+.full-height-row {
+    margin: 0;
+    height: 100vh;
+}
+
+.left-image {
+    height: 100vh;
+    overflow: hidden;
+    padding: 0;
+}
+
+.left-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.right-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 45px;
+    padding-right: 45px;
+}
+
+.btn-block {
+    width: 100%;
 }
 
