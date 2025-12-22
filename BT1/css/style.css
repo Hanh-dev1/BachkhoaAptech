@@ -73,12 +73,12 @@ html {
 
 .category-item, .product-card{
     padding: 20px;
-    transition: all 0.3s ease; /*giúp hover chuyển động mượt*/
 }
 
 .category-item:hover, .product-card:hover {
     transform: translateY(-10px); /*làm phần tử nổi lên theo chiều dọc*/
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transition: 0.3s ease;
 }
 
 .category-link{
@@ -223,7 +223,7 @@ table.table th {
 }
 
 .policy .section-title {
-    font-weight: 600;        
+    font-weight: 60px;        
     margin-top: 20px;
     color:#000;
 }
