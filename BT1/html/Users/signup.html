@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng ký</title>
+
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <div class="row full-height-row">
+        <!-- ẢNH -->
+        <div class="col-md-6 left-image">
+            <img src="../../img/banner_signup.jpg" class="img-fluid">
+        </div>
+
+        <!-- FORM -->
+        <div class="col-md-6 mt-5 right-form">
+            <h3 class="text-center mb-4">Đăng ký</h3>
+            
+            <form id="registerForm">
+                <!-- Họ tên -->
+                <div class="form-group">
+                    <label>Họ tên</label>
+                    <!-- Input nhập họ tên -->
+                    <input type="text" id="name" class="form-control">
+                    <small class="text-danger"></small>
+                </div>
+    
+                <!-- Email -->
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="email" class="form-control">
+                    <small class="text-danger"></small>
+                </div>
+    
+                <!-- Mật khẩu -->
+                <div class="form-group">
+                    <label>Mật khẩu</label>
+                    <input type="password" id="password" class="form-control">
+                    <small class="text-danger"></small>
+                </div>
+    
+                <!-- Nhập lại mật khẩu -->
+                <div class="form-group">
+                    <label>Nhập lại mật khẩu</label>
+                    <input type="password" id="confirm" class="form-control">
+                    <small class="text-danger"></small>
+                </div>
+    
+                <!-- Nút submit -->
+                <button type="submit" class="btn btn-dark btn-block">
+                    Đăng ký
+                </button>
+            </form>
+  
+            <p class="text-center mt-3">
+                Đã có tài khoản? <a href="signin.html" targer="_blank">Đăng nhập</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        /*showError: Hiển thị thông báo lỗi khi nhập sai input*/
+        function showError(input, message) {
+            // small nằm ngay sau input -> dùng nextElementSibling
+            input.nextElementSibling.innerText = message;
+        }
+        
+        /*clearError: Xóa thông báo lỗi*/
+        function clearError(input) {
+            input.nextElementSibling.innerText = "";
+        }
+        
+        /*BẮT SỰ KIỆN SUBMIT FORM*/
+        document.getElementById("registerForm").addEventListener("submit", function(e) {
+            // Ngăn form reload trang
+            e.preventDefault();
+        
+            // Lấy các input
+            let name = document.getElementById("name");
+            let email = document.getElementById("email");
+            let password = document.getElementById("password");
+            let confirm = document.getElementById("confirm");
+        
+            // Biến kiểm tra form hợp lệ hay không
+            let valid = true;
+        
+            // Kiểm tra họ tên
+            if (name.value.trim() === "") { //trim()->loại bỏ khoảng trắng ở đầu và cuối
+                showError(name, "Không được để trống");
+                valid = false;
+            } else {
+                clearError(name);
+            }
+        
+            // Kiểm tra email
+            if (email.value.trim() === "") {
+                showError(email, "Không được để trống");
+                valid = false;
+            } else {
+                clearError(email);
+            }
+        
+            // Kiểm tra mật khẩu (ít nhất 6 ký tự)
+            if (password.value.length < 6) {
+                showError(password, "Mật khẩu ít nhất 6 ký tự");
+                valid = false;
+            } else {
+                clearError(password);
+            }
+        
+            // Kiểm tra nhập lại mật khẩu
+            if (confirm.value !== password.value) {
+                showError(confirm, "Mật khẩu không khớp");
+                valid = false;
+            } else {
+                clearError(confirm);
+            }
+        
+            // Nếu tất cả hợp lệ
+            if (valid) {
+                alert("Đăng ký thành công!");
+                // Chuyển sang trang đăng nhập
+                window.location.href = "signin.html";
+            }
+        });
+    </script>
+
+    <script src="../../js/jquery-3.7.1.slim.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+</body>
+</html>
